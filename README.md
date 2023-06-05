@@ -1,6 +1,8 @@
 # EXP-02---PAWN-MOVEMENT
+```
 Developed by : Shobika P
 Register No: 212221230096
+```
 ## AIM:
 To Create a player movement using pawn, collectible, player health, and score.
 
