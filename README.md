@@ -30,11 +30,56 @@ To Create a player movement using pawn, collectible, player health, and score.
 
 12.Add several instances of the Coin actor to the level and adjusttheir positions so that they are spread out and not too close to each other.
 ## Output:
-### For Creating a Coin:
-![p11](https://github.com/Shobika187/EXP-02---PAWN-MOVEMENT/assets/94508142/bd7082b5-cf5d-4d01-8b30-ca6b412f598f)
+
+### Starting position of the player:
 ![image](https://github.com/Shobika187/EXP-02---PAWN-MOVEMENT/assets/94508142/2ed91533-75b4-4c2f-93a4-61483b08818c)
+### After destroying all the coins, the score and health bars get updated:
 ![image](https://github.com/Shobika187/EXP-02---PAWN-MOVEMENT/assets/94508142/842aa053-108c-4c9a-a4a7-9fdfaa5b092c)
+PROCEDURE:
+### To redirect to levels:
+1.Create a new level or open an existing one.
+
+2.Add a new widget blueprint by going to the Content Browser and right-clicking in the desired folder. Select User Interface and then Widget Blueprint.
+
+3.Design your menu by adding buttons and other UI elements to the widget. You can use images, text, and other widgets to create a visually appealing menu.
+
+4.Add a button to your menu by dragging and dropping a Button widget from the Palette onto your canvas.
+
+5.In the Button's properties, scroll down to the On Click section and click the + button next to the On Click event.
+
+6.Create a new custom event by clicking the New Binding button and selecting Custom Event.
+
+7.Name the custom event "LoadScene" or something similar.
+
+8.Open the Level Blueprint by going to the Blueprint menu and selecting Open Level Blueprint.
+
+9.Drag and drop your menu widget from the Content Browser into the Level Blueprint.
+
+10.Create a new variable in the Level Blueprint by clicking the Add Variable button in the My Blueprint panel. Name the variable "MenuWidget" or something similar and set its type to the widget blueprint you created earlier.
+
+11.In the Level Blueprint, drag from the MenuWidget variable and select Set to set the variable's value to the instance of the menu widget you added to the level.
+
+12.Create a new function in the Level Blueprint by clicking the Add Function button in the My Blueprint panel. Name the function "LoadScene" or something similar.
+
+13.Drag from the MenuWidget variable and select Get to get the instance of the menu widget.
+
+14.Drag from the Get node and select Remove From Parent to remove the menu widget from the screen.
+
+15.Drag from the LoadScene custom event and select Open Level to open the desired level or scene.
+
+16.Connect the nodes in the LoadScene function as follows: LoadScene -> Remove From Parent -> Open Level.
+
+17.Go back to your menu widget and select the button you added Earlier.
+
+18.In the Button's properties, scroll down to the On Click section and select the LoadScene custom event you created earlier.
+
+19.Save your changes and playtest your game. When the player clicks on the button in the menu, the menu widget will be removed and the desired level or scene will be loaded.
+## Node Connections:
+### Play Button:
 ![image](https://github.com/Shobika187/EXP-02---PAWN-MOVEMENT/assets/94508142/32760c29-ee28-4134-8255-37da5e47f184)
+### Quit Button:
+![image](https://github.com/Shobika187/EXP-02---PAWN-MOVEMENT/assets/94508142/95964b28-dd20-452b-ac58-2c0ecb53d696)
+### Back Button:
 ![image](https://github.com/Shobika187/EXP-02---PAWN-MOVEMENT/assets/94508142/a9a2f59b-ba92-4b2f-8552-84c2015ab0b5)
 
 
